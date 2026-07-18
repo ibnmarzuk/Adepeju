@@ -1,5 +1,5 @@
 import * as motion from "motion/react-client";
-import profilePic from "../../assets/images/adepeju_profile_1784374935128.jpg";
+import profilePic from "../../assets/images/adepoju.png";
 
 export function Hero() {
   return (
