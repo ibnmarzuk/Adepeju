@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+
+  --color-brand-black: #0a0a0a;
+  --color-brand-charcoal: #0a0a0a;
+  --color-brand-graphite: #27272a;
+  --color-brand-slate: #18181b;
+  
+  --color-brand-gold: #c5a059;
+  --color-brand-gold-muted: #a38243;
+  
+  --color-brand-white: #f8f8f8;
+  --color-brand-gray-light: #a1a1aa;
+  --color-brand-gray-muted: #71717a;
+}
+
+body {
+  @apply bg-brand-black text-brand-white font-sans antialiased selection:bg-brand-gold selection:text-brand-black;
+  overscroll-behavior: none;
+}
+
+/* Cinematic Composition Backgrounds */
+.bg-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  background-position: center top;
+}
+
+.bg-rule-of-thirds {
+  background-image: 
+    linear-gradient(to right, transparent 33.33%, rgba(197, 160, 89, 0.05) 33.33%, rgba(197, 160, 89, 0.05) calc(33.33% + 1px), transparent calc(33.33% + 1px), transparent 66.66%, rgba(197, 160, 89, 0.05) 66.66%, rgba(197, 160, 89, 0.05) calc(66.66% + 1px), transparent calc(66.66% + 1px)),
+    linear-gradient(to bottom, transparent 33.33%, rgba(197, 160, 89, 0.05) 33.33%, rgba(197, 160, 89, 0.05) calc(33.33% + 1px), transparent calc(33.33% + 1px), transparent 66.66%, rgba(197, 160, 89, 0.05) 66.66%, rgba(197, 160, 89, 0.05) calc(66.66% + 1px), transparent calc(66.66% + 1px));
+}
+
+/* Safe Area Guide */
+.safe-area {
+  position: absolute;
+  inset: 5%;
+  border: 1px solid rgba(197, 160, 89, 0.1);
+  pointer-events: none;
+}
+
+/* Crosshairs */
+.crosshair {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+.crosshair::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(197, 160, 89, 0.5);
+}
+.crosshair::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(197, 160, 89, 0.5);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
