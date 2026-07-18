@@ -59,7 +59,7 @@ export function Navbar() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-12 text-[11px] uppercase tracking-widest font-medium text-brand-white mt-1">
+        <div className="hidden md:flex gap-12 text-[11px] uppercase tracking-widest font-medium text-brand-white mt-1 italic font-serif">
           {navLinks.map((link) => (
             <a 
               key={link.label}
@@ -101,7 +101,7 @@ export function Navbar() {
               <a
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`text-xl uppercase tracking-[0.2em] font-medium transition-colors ${
+                className={`text-xl uppercase tracking-[0.2em] font-medium italic font-serif transition-colors ${
                   link.highlight 
                     ? "text-brand-gold border-b border-brand-gold/40 pb-2 hover:text-brand-white" 
                     : "text-brand-white hover:text-brand-gold"

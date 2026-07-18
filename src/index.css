@@ -18,6 +18,10 @@
   --color-brand-gray-muted: #71717a;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-brand-black text-brand-white font-sans antialiased selection:bg-brand-gold selection:text-brand-black;
   overscroll-behavior: none;
