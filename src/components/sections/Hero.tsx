@@ -17,14 +17,14 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-6 md:px-10 relative z-10 w-full flex-1 flex flex-col justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center lg:items-end">
           
-          <div className="col-span-1 lg:col-span-8 flex flex-col gap-6 order-2 lg:order-1">
+          <div className="col-span-1 lg:col-span-8 flex flex-col gap-6 order-1">
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="text-7xl md:text-[90px] lg:text-[110px] leading-[0.85] font-serif italic mb-2 tracking-tight text-brand-white"
+              className="text-5xl sm:text-7xl md:text-[90px] lg:text-[110px] leading-[0.85] font-serif italic mb-2 tracking-tight text-brand-white"
             >
               Adepeju<br/>Adedamola
             </motion.h1>
@@ -33,7 +33,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="max-w-md text-lg text-brand-gray-light leading-relaxed font-light mt-4"
+              className="max-w-md text-base sm:text-lg text-brand-gray-light leading-relaxed font-light mt-4"
             >
               Multidisciplinary creative leader specializing in <span className="text-brand-white">cinematic storytelling</span> and high-impact brand strategy for global entities.
             </motion.p>
@@ -63,9 +63,9 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="col-span-1 lg:col-span-4 flex flex-col items-start lg:items-end pb-4 order-1 lg:order-2 relative"
+            className="col-span-1 lg:col-span-4 flex flex-col items-center lg:items-end pb-4 order-2 relative"
           >
-            <div className="w-full max-w-sm h-80 lg:h-[420px] bg-brand-slate border border-brand-graphite relative grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden group">
+            <div className="w-full max-w-sm aspect-[4/5] bg-brand-slate border border-brand-graphite relative grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden group">
               {/* Profile Image */}
               <img 
                 src={profilePic} 
@@ -84,7 +84,8 @@ export function Hero() {
               <div className="absolute bottom-4 right-4 w-4 h-[1px] bg-brand-gold/60 z-10" />
               <div className="absolute bottom-4 right-4 w-[1px] h-4 bg-brand-gold/60 z-10" />
 
-              <div className="absolute bottom-6 left-6 z-20 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              {/* Positioned at bottom right to avoid overlapping burned-in text on bottom left */}
+              <div className="absolute bottom-6 right-6 z-20 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] flex flex-col items-end">
                 <span className="text-[10px] font-mono text-brand-white uppercase block mb-1 tracking-widest">PROJ_01_HERO.ari</span>
                 <div className="w-12 h-[1px] bg-brand-gold"></div>
               </div>
@@ -117,11 +118,11 @@ export function Hero() {
               <span>Xara x Superteam NG</span>
             </div>
           </div>
-          <div className="col-span-2 lg:col-span-1">
+          <div className="col-span-1 lg:col-span-1">
             <span className="block text-[10px] uppercase tracking-widest text-brand-gray-muted mb-2 font-mono">Experience</span>
             <div className="text-3xl font-serif text-brand-gold">5+ <span className="text-xs align-top uppercase text-brand-gray-muted ml-1">Years</span></div>
           </div>
-          <div className="col-span-2 lg:col-span-1">
+          <div className="col-span-1 lg:col-span-1">
             <span className="block text-[10px] uppercase tracking-widest text-brand-gray-muted mb-2 font-mono">Impact</span>
             <div className="text-3xl font-serif text-brand-gold">70+ <span className="text-xs align-top uppercase text-brand-gray-muted ml-1">Projects</span></div>
           </div>
