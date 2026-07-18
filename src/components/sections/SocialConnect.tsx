@@ -1,4 +1,3 @@
-import React from "react";
 import { SectionHeading } from "../ui/SectionHeading";
 import * as motion from "motion/react-client";
 import { Mail } from "lucide-react";
